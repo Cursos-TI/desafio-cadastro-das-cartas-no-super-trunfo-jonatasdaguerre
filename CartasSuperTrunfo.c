@@ -1,48 +1,26 @@
 #include <stdio.h>
 
-int main(){
-    char estado, codigocarta[10], cidade[50]; //Variáveis que trazem valores com caracteres pré estabelecidos
-    int populacao, pib, pontosturisticos; //Variáveis que trazem números inteiros(Sem casa decimal)
-    float areakm2; //Variável que traz números com casas decimais
+int main() {
+    char estado[3], codigocarta[10], cidade[50];
+    int populacao, pib, pontosturisticos;
+    float areakm2;
 
-    printf("Carta 1: \n"); //printf mostra a informação para o usuário e o \n é para a quebra de linha
+    // Carta 1
+    printf("Carta 1: \n");
 
     printf("Estado: \n");
-    scanf("%s", &estado); //%s é o comando que faz o char funcionar e o & valida a variável
+    scanf("%2s", estado); // Limitar o estado para 2 caracteres
 
     printf("Codigo: \n");
-    scanf("%s", &codigocarta);
+    scanf("%9s", codigocarta); // Limitar o código para 9 caracteres
 
     printf("Nome da cidade: \n");
-    scanf("%s", &cidade);
-
-    printf("Populacao: \n");
-    scanf("%d", &populacao); //%d é o comando que faz o int funcionar e o & valida a variável
-
-    printf("Area: \n");
-    scanf("%f", &areakm2); //%f é o comando que faz o float funcionar e o & valida a variável
-
-    printf("PIB: \n");
-    scanf("%d", &pib);
-
-    printf("Numero de pontos turisticos: \n");
-    scanf("%d", &pontosturisticos);
-
-    printf("\n Carta 2: \n");
-    
-    printf("Estado: \n");
-    scanf("%s", &estado);
-
-    printf("Codigo: \n");
-    scanf("%s", &codigocarta);
-
-    printf("Nome da cidade: \n");
-    scanf("%s", &cidade);
+    scanf("%49s", cidade); // Limitar o nome da cidade para 49 caracteres
 
     printf("Populacao: \n");
     scanf("%d", &populacao);
 
-    printf("Area: \n");
+    printf("Area (km²): \n");
     scanf("%f", &areakm2);
 
     printf("PIB: \n");
@@ -51,18 +29,43 @@ int main(){
     printf("Numero de pontos turisticos: \n");
     scanf("%d", &pontosturisticos);
 
-    printf("Carta 1: \n");
+    // Exibir informações da Carta 1
+    printf("\nCarta 1: \n");
     printf("\n - Estado: %s \n - Codigo: %s \n - Cidade: %s", estado, codigocarta, cidade);
     printf("\n - Populacao: %d", populacao);
-    printf("\n - Area: %f", areakm2);
+    printf("\n - Area: %.2f km²", areakm2);  // Exibindo com 2 casas decimais
     printf("\n - PIB: %d \n - Numero de pontos turisticos: %d \n", pib, pontosturisticos);
-    
-        printf("\n Carta 2: \n");
-        printf("\n - Estado: %s \n - Codigo: %s \n - Cidade: %s", estado, codigocarta, cidade);
-        printf("\n - Populacao: %d", populacao);
-        printf("\n - Area: %f", areakm2);
-        printf("\n - PIB: %d \n - Numero de pontos turisticos: %d", pib, pontosturisticos);
-        
-    return 0;
 
+    // Carta 2
+    printf("\nCarta 2: \n");
+
+    printf("Estado: \n");
+    scanf("%2s", estado);
+
+    printf("Codigo: \n");
+    scanf("%9s", codigocarta);
+
+    printf("Nome da cidade: \n");
+    scanf("%49s", cidade);
+
+    printf("Populacao: \n");
+    scanf("%d", &populacao);
+
+    printf("Area (km²): \n");
+    scanf("%f", &areakm2);
+
+    printf("PIB: \n");
+    scanf("%d", &pib);
+
+    printf("Numero de pontos turisticos: \n");
+    scanf("%d", &pontosturisticos);
+
+    // Exibir informações da Carta 2
+    printf("\nCarta 2: \n");
+    printf("\n - Estado: %s \n - Codigo: %s \n - Cidade: %s", estado, codigocarta, cidade);
+    printf("\n - Populacao: %d", populacao);
+    printf("\n - Area: %.2f km²", areakm2); // Exibindo com 2 casas decimais
+    printf("\n - PIB: %d \n - Numero de pontos turisticos: %d", pib, pontosturisticos);
+
+    return 0;
 }
